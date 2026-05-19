@@ -1,0 +1,53 @@
+# Origin Style Chart
+
+Matplotlib charts styled like OriginLab — designed for scientific/engineering data visualization.
+
+## Features
+
+- **Origin-style axes**: only left and bottom spines, inward ticks
+- **Dual tick system**: major ticks with labels, minor ticks without
+- **Single & multi-curve** plotting with one function call
+- **Fully configurable**: marker style, line width, tick length, font size, colors
+
+## Installation
+
+```bash
+pip install -e .
+```
+
+Requires Python 3.9+ with `matplotlib` and `numpy`.
+
+## Quick start
+
+```python
+from origin_style_chart import plot_origin_style
+
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 15, 25, 30]
+
+fig, ax = plot_origin_style(
+    x, y,
+    xlabel="Time (s)",
+    ylabel="Amplitude (mV)",
+    xlim=(0, 6),
+    ylim=(0, 35),
+)
+fig.savefig("chart.png", dpi=300)
+```
+
+## Project structure
+
+```
+origin_style_chart/
+├── pyproject.toml           # Package metadata
+├── README.md
+├── src/
+│   └── origin_style_chart/  # Installable package
+│       ├── __init__.py
+│       └── core.py          # Config, styling, plotting functions
+└── examples/
+    ├── simple_plot.py        # Minimal template
+    └── quick_plot_template.py  # Full-featured template
+```
+
+See `examples/simple_plot.py` to get started with your own data.
