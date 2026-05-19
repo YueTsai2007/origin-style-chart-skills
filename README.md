@@ -35,19 +35,3 @@ fig, ax = plot_origin_style(
 fig.savefig("chart.png", dpi=300)
 ```
 
-## Project structure
-
-```
-origin_style_chart/
-├── pyproject.toml           # Package metadata
-├── README.md
-├── src/
-│   └── origin_style_chart/  # Installable package
-│       ├── __init__.py
-│       └── core.py          # Config, styling, plotting functions
-└── examples/
-    ├── simple_plot.py        # Minimal template
-    └── quick_plot_template.py  # Full-featured template
-```
-
-See `examples/simple_plot.py` to get started with your own data.
